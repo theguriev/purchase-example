@@ -27,29 +27,6 @@ const getSomeMoney = async ({
     }),
     method: "POST",
   });
-  console.log(
-    "log: getSomemoney -> request",
-    request,
-    `${process.env.BASE_URL}billing/transactions`,
-    {
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        from: process.env.BLLS_ADDRESS,
-        to,
-        value: 1,
-        symbol: "bls",
-        signature: await signTransaction(
-          process.env.BLLS_PRIVATE_KEY,
-          process.env.BLLS_ADDRESS,
-          to,
-          1,
-          "bls"
-        ),
-        message,
-      }),
-      method: "POST",
-    }
-  );
   const response = await request.json();
   revalidateTag("ballance");
   return response;
