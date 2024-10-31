@@ -18,7 +18,7 @@ const BallanceCard: FC<
   PropsWithChildren<{ ballance: number; address: string }>
 > = ({ children, ballance, address }) => {
   return (
-    <Card className="w-[380px] bg-gray-30 shadow-none border-gray-100">
+    <Card className="max-w-[380px] bg-gray-30 shadow-none border-gray-100">
       <CardHeader>
         <CardTitle>Ballance</CardTitle>
         <CardDescription className="text-green-700">

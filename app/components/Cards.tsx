@@ -21,7 +21,7 @@ const Cards = async ({
       <div className="flex w-full">
         <h1 className="text-xl font-bold">Payment</h1>
       </div>
-      <div className="flex space-x-4 w-full">
+      <div className="flex sm:space-x-4 space-y-4 sm:space-y-0 w-full flex-col sm:flex-row">
         <div className="flex space-y-4 flex-col">
           <EnterPriseCard purchased={purchased}>
             <BuyNow
@@ -31,7 +31,7 @@ const Cards = async ({
             />
           </EnterPriseCard>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col">
           <BallanceCard address={address} ballance={ballance}>
             <GetSomeMoney
               address={address}

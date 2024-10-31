@@ -24,7 +24,7 @@ const EnterPriseCard: FC<PropsWithChildren<{ purchased: boolean }>> = ({
   children,
 }) => {
   return (
-    <Card className="w-[380px]">
+    <Card className="max-w-[380px]">
       {purchased ? (
         <Card className="w-full max-w-md mx-auto bg-gradient-to-br from-blue-500 to-purple-600 text-white shadow-xl">
           <CardHeader className="text-center pb-2">
